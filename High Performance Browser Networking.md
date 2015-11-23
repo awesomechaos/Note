@@ -18,8 +18,9 @@ High Performance Browser Networking
 * Upgrade server kernel to latest version (Linux: 3.2+).
 * Ensure that cwnd size is set to 10.
 * Disable slow-start after idle.
-> $> sysctl net.ipv4.tcp_slow_start_after_idle	
-> $> sysctl -w net.ipv4.tcp_slow_start_after_idle=0
+	> $> sysctl net.ipv4.tcp_slow_start_after_idle	
+	> 
+	> $> sysctl -w net.ipv4.tcp_slow_start_after_idle=0
 * Ensure that window scaling is enabled.
 * Eliminate redundant data transfers.
 * Compress transferred data.
@@ -47,4 +48,7 @@ High Performance Browser Networking
 * Application may use keepalives when needed (minimum interval 15 seconds).
 
 #Transport Layer Security
+* TLS握手方式：
 ![TLS握手](image/hpbn_tls_4.2.png)
+* **Optimize TLS handshaks with [Session Resumption](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html#TLS_RESUME) and [False Start](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html#TLS_FALSE_START) **
+* 
