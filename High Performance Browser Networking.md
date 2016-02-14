@@ -48,7 +48,9 @@
 
 ## Transport Layer Security
 * TLS握手方式：
-![TLS握手](image/hpbn_tls_4.2.png)
+![TLS握手](https://github.com/awesomechaos/Note/raw/master/image/hpbn_tls_4.2.png)
 * **Optimize TLS handshaks with [Session Resumption](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html#TLS_RESUME) and [False Start](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html#TLS_FALSE_START)**
 * **Google’s servers reduce their OpenSSL buffers down to about 5 KB**
 * **用gzip替代TLS压缩，服务器关闭TLS压缩，因为有攻击漏洞和对CPU消耗过大**
+
+### [SSL安全测试网站](https://www.ssllabs.com/ssltest/)
